@@ -1,3 +1,21 @@
+@import url(@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/*@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
 * {
     margin: 0;
     padding: 0;
@@ -15,18 +33,18 @@ img {
 
 body {
     color: #000;
-    font-size: 16px;
-    line-height: 1.5;
+    font: 400 14px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #000;
 }
 
 input {
     outline: none;
 }
+
 table {
     border-collapse: collapse;
 }
@@ -36,7 +54,234 @@ table {
 }
 
 .container {
-    max-width: 1230px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_banner {
+    display: block;
+    min-height: 100vh;
+    background: url(../images/main_banner.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.logo {
+    font: 700 24px/36px 'Montserrat', Arial, Tahoma, sans-serif;
+    color: #fff;
+    letter-spacing: -0.6px;
+}
+
+.navigation a {
+    color: #fff;
+    font: 400 14px/24px 'Montserrat', Arial, Tahoma, sans-serif;
+    padding: 5px 16.5px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.navigation a:last-child {
+    padding-right: 0%;
+}
+
+.mobile_menu {
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    display: none;
+    background: url("../images/burger_menu.png") no-repeat 50%;
+    background-size: 100%;
+    text-align: right;
+}
+
+.banner_text {
+    color: #fff;
+    flex-grow: 1;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.banner_text h1 {
+    text-transform: uppercase;
+    font: 800 47px 'Montserrat', Arial, Tahoma, sans-serif;
+    padding-bottom: 16px;
+    padding-top: 212px;
+}
+
+.banner_text h4 {
+    font: 400 19px 'Roboto Slab', 'Times New Roman', Times, serif;
+    padding-bottom: 63px;
+}
+
+.banner_text a {
+    color: #fff;
+    text-transform: uppercase;
+    font: 400 14px 'Montserrat', Arial, Tahoma, sans-serif;
+    padding: 13px 33px;
+    border: 2px solid #fff;
+    border-radius: 1px;
+    transition: 0.3s;
+    letter-spacing: 1.4px;
+}
+
+.banner_text a:hover {
+    background: #fff;
+    color: #c0301c;
+    font-weight: 600;
+}
+
+.about .swiper-slide {
+    text-align: center;
+}
+
+.about_img_wrapper {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 15px;
+}
+
+.about_img_wrapper:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background: rgba(85, 85, 85, 0.5);
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.about_img_wrapper img {
+    display: block;
+}
+
+.about_img_wrapper ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    transition: 0.3s;
+    z-index: 10;
+
+}
+
+.about_img_wrapper a {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.about_img_wrapper a:hover {
+    background: #c0301c;
+}
+
+.swiper-slide:hover .about_img_wrapper:before {
+    opacity: 1;
+    z-index: 5;
+}
+
+.swiper-slide:hover .about_img_wrapper ul {
+    top: auto;
+    bottom: 30px;
+}
+
+#services {
+    /*height: 1000px;*/
+}
+
+@media (max-width: 700px) {
+    .logo {
+        font-size: 34px;
+        margin-left: 15%;
+    }
+
+    .mobile_menu {
+        display: inline-block;
+        margin-left: 30%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        width: auto;
+        right: 0;
+        padding: 5px 15px;
+        margin-right: 25px;
+        text-align: right;
+        z-index: 10;
+        background: #fff;
+        
+    }
+
+    .navigation a {
+        display: block;
+        padding: 8px 5px;
+        color: #c0301c;
+        font-weight: 700;
+    }
+
+    .banner_text h1 {
+        padding-top: 90px;
+        font-weight: 550;
+    }
+
+    .banner_text h4 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 540px) {
+
+}
+    
+@media (max-width: 490px) {
+
+}
+
+@media (max-width: 390px) {
+
+    .banner_text h1 {
+        font-size: 40px;
+        font-weight: 600;
+        padding-bottom: 50px;
+    }
+
+    .banner_text h4 {
+        font-size: 14px;
+        padding-bottom: 80px;
+    }
+
+    .banner_text a {
+        padding: 11px 21px;
+    }
+    
+}
+
+   
 }
