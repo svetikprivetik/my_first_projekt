@@ -97,7 +97,7 @@ table {
 }
 
 .navigation a:last-child {
-    padding-right: 0%;
+    padding-right: 0;
 }
 
 .mobile_menu {
@@ -145,6 +145,94 @@ table {
     background: #fff;
     color: #c0301c;
     font-weight: 600;
+}
+
+.pad {
+    min-height: 273px;
+}
+
+section {
+    padding: 96px 0;
+}
+
+#home {
+    padding: 0;
+}
+
+/*SERVICES*/
+
+h2 {
+    text-transform: uppercase;
+    font: 500 20px 'Montserrat', Arial, Tahoma, sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hor_line {
+    margin: 0 auto;
+    border: 1px solid #000;
+    width: 50px;
+    
+}
+
+.section_text {
+    text-align: left;
+    margin-bottom: 66px;
+    margin-top: 23px;
+    letter-spacing: 0.5px;
+}
+
+a img:hover {
+    border: 2px solid #c0301c;
+    border-radius: 50%;
+    background: #c0301c;
+}
+
+.services_type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services_type ul {
+    text-align: center;
+    min-width: 30%;
+}
+
+h5 {
+    margin: 20px 0 15px 0;
+    text-transform: uppercase;
+    font: 500 14px 'Montserrat', Arial, Tahoma, sans-serif;
+}
+
+.services_type ul{
+    margin-right: 44px;
+}
+
+.services_type ul:last-child {
+    margin: 0;
+}
+
+
+/*ABOUT US*/
+
+.about_text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    text-align: center;
+}
+
+.about_text .section_text {
+    margin-right: 44px;
+    margin-bottom: 63px;
+    margin-top: 0;
+    min-width: 48%;
+}
+
+.about_text .section_text:last-child {
+    margin-right: 0;
 }
 
 .about .swiper-slide {
@@ -210,14 +298,56 @@ table {
     bottom: 30px;
 }
 
-#services {
-    /*height: 1000px;*/
+.about_name {
+    text-align: center;
+    margin: 16px 20px 6px 12px;
+    text-transform: uppercase;
+    font: 500 14px 'Montserrat', Arial, Tahoma, sans-serif;
+}
+
+.about_position {
+    text-align: center;
+    font-size: 12px;
+}
+
+.gallery {
+    margin-bottom: 83px;
+}
+/*СТРЕЛОЧКИ НА ПОРТРЕТАХ*/
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+    background: #8b8b8b;
+    width: 43px;
+    height: 38px;
+    text-align: center;
+    padding-top: 11px;
+    padding-left: 10px;
+    margin-bottom: 66px;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
+    margin-left: -19px;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-next:after {
+    margin-right: -20px;
+    padding-right: 19px;
+}
+
+.swiper-rtl .swiper-button-prev:after:hover {
+    background: #c0301c;
+}
+
+#works {
+    padding: 5px;
 }
 
 @media (max-width: 700px) {
     .logo {
         font-size: 34px;
-        margin-left: 15%;
+        margin-left: 12%;
     }
 
     .mobile_menu {
@@ -236,7 +366,7 @@ table {
         text-align: right;
         z-index: 10;
         background: #fff;
-        
+        min-width: 120px;
     }
 
     .navigation a {
@@ -254,9 +384,91 @@ table {
     .banner_text h4 {
         font-size: 17px;
     }
+
+    section {
+        padding: 10px 0;
+    }
+
+    .services_type ul {
+        margin-right: 20px;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    h2 {
+        padding-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .section_text {
+        text-align: center;
+        margin-bottom: 22px;
+        margin-top: 13px;
+    }
+    .about_text .section_text {
+        margin-right: 15px;
+        margin-bottom: 35px;
+        margin-top: 0;
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .about_name {
+        text-align: center;
+        margin: 10px 12px 6px 12px;
+        text-transform: uppercase;
+        font: 500 12px 'Montserrat', Arial, Tahoma, sans-serif;
+    }
+
+    .about_position {
+        font-size: 11px;
+        line-height: 17px;
+    }
+
+    .gallery {
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 540px) {
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .section_text {
+        font-size: 12px;
+    }
+
+    .img_plus_h5 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services_type {
+        display: inline-block;
+    }
+
+    h5 {
+        margin: 10px;
+    }
+
+    .section_text {
+        margin-bottom: 0;
+    }
+
+    .services_type ul {
+        margin-top: 40px;
+        margin-right: 0;
+    }
+
+    .services_type ul:last-child {
+        margin-top: 40px;
+    }
+
+    .about_text .section_text {
+        margin-top: 15px;
+    }
 
 }
     
@@ -284,4 +496,3 @@ table {
 }
 
    
-}
