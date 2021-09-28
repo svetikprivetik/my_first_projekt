@@ -215,6 +215,10 @@ h5 {
 
 /*ABOUT US*/
 
+#about {
+    background: #f8f8f8;
+}
+
 .about_text {
     display: flex;
     justify-content: space-between;
