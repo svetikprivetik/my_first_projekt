@@ -3,7 +3,7 @@ $(document).ready(function (){
         $('.menu').slideToggle();
     })
 
-    const swiper = new Swiper('.gallery', {
+    const gallery = new Swiper('.gallery', {
         loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -52,5 +52,19 @@ $(document).ready(function (){
         $('html, body').animate({
             scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
+    });
+    
+    //CLIENTS
+    const swiper = new Swiper('.clients', {
+        // Optional parameters
+        loop: true, //листание по кругу
+        
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        //slidesPerView: 2,
+        //effect: 'fade',
+        
     });
 })

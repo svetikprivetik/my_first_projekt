@@ -180,7 +180,7 @@ h2 {
     text-align: left;
     margin-bottom: 66px;
     margin-top: 23px;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .services_type {
@@ -210,7 +210,7 @@ h5 {
 
 /*ABOUT US*/
 
-#about {
+#about, #clients {
     background: #f8f8f8;
 }
 
@@ -457,14 +457,14 @@ h5 {
     background-size: cover;
     z-index: 1;
     position: relative;
-    margin-top: 20px;
+    margin-top: -23px;
 }
 
 .banner2_text {
     font-size: 30px;
     color: #fff;
     text-align: center;
-    padding: 106px 0 10px;
+    padding: 87px 0 10px;
 }
 
 .red {
@@ -506,7 +506,7 @@ h5 {
 
 .post {
     display: flex;
-    padding: 38px 0;
+    padding: 38px 0 10px 0;
 }
 
 .post + .post {
@@ -567,6 +567,7 @@ h5 {
     font-size: 14px;
     font-weight: 550;
     font-family: 'Montserrat', Arial, Tahoma, sans-serif;
+    letter-spacing: 1.1px;
 }
 
 .post_title h5 a:hover, .post_link:hover, .post_author a:hover {
@@ -597,6 +598,101 @@ h5 {
     color: #777;
 }
 
+.blog_center {
+    margin-bottom: 0;
+}
+
+#contact {
+    width: 100%;
+    height: 300px;
+    background: #c0301c;
+}
+
+/*.twit{
+    display: inline-block;
+    margin: 0 auto;
+}*/
+
+.twit {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.soc_media {
+    text-align: center;
+}
+
+.soc_media .hor_line {
+    border: 1px solid #fff;
+    margin: 22px auto;
+}
+
+.copyright {
+    font: 400 11.5px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+ .client {
+    padding-top: 25px;
+}
+
+.clients {
+    height: 380px;
+}
+
+.client_logo {
+    text-align: center;
+    padding: 33px;
+}
+
+.client_logo img {
+    padding: 31px;
+}
+
+.quote {
+    font-style: italic;
+    padding-bottom: 32px;
+}
+
+.client_content {
+    width: 860px;
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+    margin: 0 auto;
+    text-align: center;
+}
+
+:root {
+    --swiper-theme-color: #c0301c;
+}
+
+.swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,13px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,13px));
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 9px var(--swiper-pagination-bullet-horizontal-gap,4px);
+}
+
+@media (max-width: 1100px) {
+    
+    .clients {
+        height: 500px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 477px;
+    }
+
+}
+
 @media (max-width: 940px) {
     .post_image {
         flex-basis: 340px;
@@ -623,6 +719,10 @@ h5 {
     .post_content p {
         margin-bottom: 15px;
     }
+
+    .client_content {
+        width: 740px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -644,6 +744,26 @@ h5 {
         text-align: justify;
     }
 
+    .client_logo img {
+        
+        padding: 20px;
+    }
+
+    .client_logo {
+        padding: 0px;
+    }
+
+    .clients {
+        height: 400px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 360px;
+    }
+
+    .client_content {
+        max-width: 500px;
+    }
 }
 
 
@@ -692,6 +812,10 @@ h5 {
         padding: 10px 0;
     }
 
+    #contact {
+        padding: 96px 0;
+    }
+
     .services_type ul {
         margin-right: 20px;
         font-size: 12px;
@@ -736,6 +860,8 @@ h5 {
         font-size: 25px;
         line-height: 45px;
     }
+
+
 
 @media (max-width: 540px) {
 
@@ -790,10 +916,24 @@ h5 {
         padding: 0 20px;
     }
 
-    
+    .services_type ul:last-child {
+        margin-bottom: 40px;
+    }
 
     .about_text {
         display: block;
+    }
+
+    .clients {
+        height: 600px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 500px;
+    }
+
+    .client_content {
+        width: 400px;
     }
 
 }
@@ -806,6 +946,11 @@ h5 {
     
     .tabs-nav a {
         padding: 10px 8px;
+    }
+
+    .client_content {
+        width: 300px;
+        font-size: 16px;
     }
 
 }
